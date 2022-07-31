@@ -1,32 +1,34 @@
 package test;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
-import Pages.googlesearchpage;
 import Pages.googlesearchpagePOM;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class googleSearchtestPOM {
+public class Testng {
 	static WebDriver driver = null;
-	
-	public static void main(String[] args) {
-		googlesearch();
-	}
-	
-	
-	public static void googlesearch() {
 
+@BeforeTest
+	public static void Setup() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		
+	}
+
+@org.testng.annotations.Test
+	public static void Test() {
 		driver.get("https://www.google.com");
 		googlesearchpagePOM searchpageobj = new googlesearchpagePOM(driver);
 		searchpageobj.setTextInSearchbox("A B C");
-		searchpageobj.clickSearchButton();
+		searchpageobj.clickSearchButton();	
+		
+	}
+
+@AfterTest
+	public static void teardorn() {
 		
 		driver.close();
 		driver.quit();

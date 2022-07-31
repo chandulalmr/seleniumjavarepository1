@@ -27,7 +27,7 @@ public class googlesearchpagePOM {
 	}
 	
 	public void clickSearchButton() {
-		driver.findElement(searchbox).sendKeys(Keys.RETURN);
+		driver.findElement(textbox_search).sendKeys(Keys.RETURN);
 	}
 
 }
