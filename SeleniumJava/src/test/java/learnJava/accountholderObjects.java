@@ -5,7 +5,7 @@ public class accountholderObjects {
 	public static void main(String[] args) {
 		
 //Account holder is class and object for tom. so tom is entered.	We need to create another class where we will create objects fpr account holder class	
-// create objects fir account holder class
+// create objects for account holder class
 		
 		accountHolder tom = new accountHolder();
 		accountHolder henry = new accountHolder();

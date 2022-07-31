@@ -6,26 +6,30 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import Pages.googlesearchpage;
+import Pages.googlesearchpagePOM;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class googleSearch {
+public class googleSearchtestPOM {
+	static WebDriver driver = null;
+	
 	public static void main(String[] args) {
 		googlesearch();
 	}
 	
+	
 	public static void googlesearch() {
 
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
+		driver = new ChromeDriver();
 		
 		driver.get("https://www.google.com");
-		WebElement textbox = driver.findElement(By.xpath("//input[@name='q']"));
-		textbox.sendKeys("ABC");
-		textbox.sendKeys(Keys.RETURN);
+//		driver.findElement(By.xpath("//input[@name='q']")).sendKeys("ABC");
+//		googlesearchpage.textbox_search(driver).sendKeys("ABC");
 		
-		
-//		WebElement searchbox = driver.findElement(By.xpath("//input[@name='btnK']"));
-//		searchbox.sendKeys(Keys.RETURN);
+		googlesearchpagePOM searchpageobj = new googlesearchpagePOM(driver);
+		searchpageobj.setTextInSearchbox("A B C");
+		searchpageobj.clickSearchButton();
 		
 		driver.close();
 		driver.quit();
