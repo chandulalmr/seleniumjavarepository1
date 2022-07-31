@@ -1,4 +1,4 @@
-package test;
+package Practice;
 
 import java.util.List;
 
