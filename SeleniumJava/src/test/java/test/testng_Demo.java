@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 import Pages.googlesearchpagePOM;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -18,7 +19,7 @@ public class testng_Demo {
 		
 	}
 
-@org.testng.annotations.Test
+@Test
 	public static void Test() {
 		driver.get("https://www.google.com");
 		googlesearchpagePOM searchpageobj = new googlesearchpagePOM(driver);
