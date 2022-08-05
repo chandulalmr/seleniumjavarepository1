@@ -1,0 +1,4 @@
+[INFO ] 2022-08-06 00:58:31.019 [main] Log4j - This is information
+[ERROR] 2022-08-06 00:58:31.021 [main] Log4j - This is a error
+[WARN ] 2022-08-06 00:58:31.021 [main] Log4j - This is a Warn
+[FATAL] 2022-08-06 00:58:31.021 [main] Log4j - This is a Fatal
