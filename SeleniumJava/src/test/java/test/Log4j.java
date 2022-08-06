@@ -11,6 +11,7 @@ public class Log4j {
 	public static void main(String[] args) {
 		System.out.println("Hi");
 
+		loggerobj.trace("This is Trace");
 		loggerobj.info("This is information");
 		loggerobj.error("This is a error");
 		loggerobj.warn("This is a Warn");
