@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.testng_properties">
+      <class name="morepractice.requestappt">
         <methods>
-          <include name="Setup"/>
-          <include name="Test"/>
-          <include name="teardorn"/>
+          <include name="tearDown"/>
+          <include name="testUntitledTestCase"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- test.testng_properties -->
+      </class> <!-- morepractice.requestappt -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
